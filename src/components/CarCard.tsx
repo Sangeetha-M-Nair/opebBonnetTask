@@ -2,15 +2,14 @@ import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 
 import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-import { useRef } from "react"
+import { useRef } from "react";
 
 import Dropdown from 'react-bootstrap/Dropdown';
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import CarCard2 from './CarCard2';
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 
 function CarCard() {

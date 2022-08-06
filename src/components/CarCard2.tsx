@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-import Button from 'react-bootstrap/Button';
 
 import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Dropdown from 'react-bootstrap/Dropdown';
+
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -41,7 +39,8 @@ function CarCard2() {
 
                     </Form>
                     </Card.Body>
-                        <Card.Body >
+                <Card.Body >
+                    
                     <Container fluid className="cont-manufacturer" >
                         <Row className="img-row">
                             <Col ><img  className="img" src={require("../assets/images/brand1.jpeg")} /></Col>

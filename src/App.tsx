@@ -6,6 +6,7 @@ import { Container } from "react-bootstrap"
 import background from "./assets/images/car.png";
 import Header from './components/Header';
 import CarCard2 from './components/CarCard2';
+import CarCardJSon from './components/CarCardJSon';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/car" element={<CarCard2 />} />
+          <Route path="/car1" element={<CarCardJSon />} />
 
 
         </Routes>
