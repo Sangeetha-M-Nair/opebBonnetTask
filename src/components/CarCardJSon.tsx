@@ -21,7 +21,10 @@ export default function CarCardJSon() {
     const [searchTerm, setSearchTerm] = useState("");
     const [redirect, setRedirect] = useState(false);
 
-
+    type JSONDATA = {
+        image: URL;
+        car_manufacturer: string;
+    }
 
     return (
         <div >
@@ -47,28 +50,28 @@ export default function CarCardJSon() {
                 <Card.Body >
                     <Container fluid className="cont-manufacturer" >
                         <Row className="img-row">
-                    {!searchOn && JSONDATA.filter((product) => {
-                        if (searchTerm === "") {
-                            return product;
-                        } else if (
-                            product.car_manufacturer
-                                .toLowerCase()
-                                .includes(searchTerm.toLowerCase())
-                        ) {
-                            return product;
-                        }
-                    })
-                        .map((product, id) => {
-                            return (
-                               
+                            {!searchOn && JSONDATA.filter((product,id) => {
+                                if (searchTerm === "") {
+                                    return product;
+                                } else if (
+                                    product.car_manufacturer
+                                        .toLowerCase()
+                                        .includes(searchTerm.toLowerCase())
+                                ) {
+                                    return product;
+                                }
+                            })
+                                .map((product, id) => {
+                                    return (
 
-                                <Col ><img className="img" src={product.image} />
-                                    <h6>{product.car_manufacturer}</h6></Col>
-                               
-                            )
-                        })
+
+                                        <Col key={product.id} ><img className="img" src={`${product.image}`} />
+                                            <h6>{product.car_manufacturer}</h6></Col>
+
+                                    )
+                                })
                             }
-                            
+
                         </Row>
 
                     </Container>

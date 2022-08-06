@@ -22,8 +22,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/car" element={<CarCard2 />} />
-          <Route path="/car1" element={<CarCardJSon />} />
+          <Route path="/car1" element={<CarCard2 />} />
+          <Route path="/car" element={<CarCardJSon />} />
 
 
         </Routes>
