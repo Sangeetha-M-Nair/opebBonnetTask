@@ -10,7 +10,7 @@ import CarCard2 from './components/CarCard2';
 function App() {
   return (
     <div className="App" style={{
-      backgroundImage: `url(${background})`, backgroundRepeat: " no-repeat", overflow: "scroll",
+      backgroundImage: `url(${background})`, backgroundRepeat: " no-repeat", overflow: "auto",
       background, position: "absolute", backgroundColor: "grey", height: 900, width: "100%"
     }}
      >

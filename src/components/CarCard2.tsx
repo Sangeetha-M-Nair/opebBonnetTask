@@ -16,6 +16,10 @@ import { Search } from 'react-bootstrap-icons';
 
 function CarCard2() {
 
+    const [searchOn, setSearchOn] = useState(false);
+    const [searchTerm, setSearchTerm] = useState("");
+    const location = ["Chevrolet", "Maruti Suzuki", "Daewoo", "Datsun", "fiat", "ford", "honda", "hyundai", "Mahindra"];
+
 
     return (
         <div >
@@ -25,10 +29,13 @@ function CarCard2() {
                     <Card.Title style={{ fontWeight: 700, fontSize: "1rem", alignContent: "left", alignItems: "left", margin: 10, textAlign: "left" }}>Select Manufacturer</Card.Title>
                     <Form className="d-flex">
                         <Form.Control
-                            type="search"
+                            type="text"
                             placeholder="Search Brands" 
                             className="me-2"
-                            aria-label="Search" autoFocus={true}
+                            aria-label="Search" autoFocus={true} id="searchInput"
+                            onChange={(event) => {
+                                setSearchTerm(event.target.value);
+                            }}
                         />
                         <Search className="searchIcon" size={12} />
 
@@ -37,7 +44,7 @@ function CarCard2() {
                         <Card.Body >
                     <Container fluid className="cont-manufacturer" >
                         <Row className="img-row">
-                            <Col ><img className="img" src={require("../assets/images/brand1.jpeg")} /></Col>
+                            <Col ><img  className="img" src={require("../assets/images/brand1.jpeg")} /></Col>
                             <Col><img className="img" src={require("../assets/images/brand9.jpeg")} /></Col>
                             <Col><img className="img" src={require("../assets/images/brand2.jpeg")} /></Col>
                         </Row>
